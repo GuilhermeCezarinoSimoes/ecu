@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../filtro/filtro.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <title>EcoTechShop</title>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <a href="../index.html" class="logo-container">
+                <img src="../img/logoverde.jpg" alt="logo" class="logo">
+            </a>
+            <nav class="nav-container">
+                <ul class="nav-list">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../vestuario/vestuario.html">Vestuário</a></li>
+                    <li><a href="../produtosdebeleza/produtosdebeleza.html">Produtos De Beleza</a></li>
+                    <li><a href="../mobilias/mobiliasGreen.html">Mobílias</a></li>
+                    <li><a href="../technoGreen/technoGreen.html">TecnoGreen</a></li>
+                    <li><a href="../contato/contato.html">Contato</a></li>
+                </ul>
+            </nav>
+            <a href="../carrinho/carrinho.html" class="cart-icon">
+                <i class="fas fa-shopping-cart"></i>
+            </a>
+        </div>
+    </header>
+    
+    <h1>Filtro de Produtos :</h1>
+        
+        <div class="filtro-container">
+            <h2>Filtrar por:</h2>
+            <div class="filtros">
+                <label for="tipo">Tipo de Produto:</label>
+                <select id="tipo" onchange="filtrarProdutos()">
+                    <option value="all">Todos</option>
+                    <option value="Camiseta">Camisetas</option>
+                    <option value="Calça">Calças</option>
+                    <option value="Tenis">Tênis</option>
+                    <option value="Acessorio">Acessórios</option>
+                    <option value="Paineis Solares">Painel Solar</option>
+                    <option value="Energia">Tipos de Energia</option>
+                    <option value="Material">Material</option>
+                    <option value="Perfume">Perfume</option>
+                    <option value="Facial">Produto Facial</option>
+                    <option value="Corporeo">Produto Corporeo</option>
+                    <option value="Acento">Acentos</option>
+                    <option value="Vaso">Vasos de Planta</option>
+                    <option value="Prateleira">Prateleira</option>
+                </select>
+            </div>
+        </div>
+    
+        <section id="products">
+            <div class="product-grid">
+                <div class="product-item" data-tipo="Camiseta">
+                    <img src="../img/camiseta 1.jpg" alt="">
+                    <h3>Camiseta Branca Beija-Flor</h3>
+                </div>
+                <div class="product-item" data-tipo="Camiseta">
+                    <img src="../img/camiseta 2.jpg" alt="">
+                    <h3>Camiseta Branca Geométrica</h3>
+                </div>
+                <div class="product-item" data-tipo="Camiseta">
+                    <img src="../img/camiseta 3.jpg" alt="">
+                    <h3>Camiseta DarkLab</h3>
+                </div>
+                <div class="product-item" data-tipo="Calça">
+                    <img src="../img/jeans 3.jpg" alt="">
+                    <h3>Calça Jeans Azul</h3>
+                </div>
+                <div class="product-item" data-tipo="Calça">
+                    <img src="../img/calça.jpg" alt="">
+                    <h3>Calça Cinza</h3>
+                </div>
+                <div class="product-item" data-tipo="Calça">
+                    <img src="../img/jeans 2.jpg" alt="">
+                    <h3>Calça Jeans Preta</h3>
+                </div>
+                <div class="product-item" data-tipo="Tenis">
+                    <img src="../img/tenis 1.jpg" alt="">
+                    <h3>Tênis Marrom</h3>
+                </div>
+                <div class="product-item" data-tipo="Tenis">
+                    <img src="../img/tenis 3.jpg" alt="">
+                    <h3>Tênis Azul</h3>
+                </div>
+                <div class="product-item" data-tipo="Tenis">
+                    <img src="../img/tenis 2.jpg" alt="">
+                    <h3>Tênis Branco</h3>
+                </div>
+                <div class="product-item" data-tipo="Acessorio">
+                    <img src="../img/acessorio1.jpg" alt="">
+                    <h3>Pulseira de Miçangas</h3>
+                </div>
+                <div class="product-item" data-tipo="Acessorio">
+                    <img src="../img/acessorio2.jpg" alt="">
+                    <h3>Colar de Miçangas</h3>
+                </div>
+                <div class="product-item" data-tipo="Acessorio">
+                    <img src="../img/acessorio3.jpg" alt="">
+                    <h3>Brinco de Miçangas</h3>
+                </div>
+                <div class="product-item" data-tipo="Paineis Solares">
+                    <img src="../img/vidro solar1.jpg" alt="">
+                    <h3>Painel Solar no Telhado de Casas</h3>
+                </div>
+                <div class="product-item" data-tipo="Paineis Solares">
+                    <img src="../img/vidro solar 3.jpg" alt="">
+                    <h3>Painel Solar em Janelas</h3>
+                </div>
+                <div class="product-item" data-tipo="Paineis Solares">
+                    <img src="../img/vidro solar 2.jpg" alt="">
+                    <h3>Painel Solar em Telhado de Empresas</h3>
+                </div>
+                <div class="product-item" data-tipo="Energia">
+                    <img src="../img/kwideletric.jpg" alt="">
+                    <h3>Carro Elétrico</h3>
+                </div>
+                <div class="product-item" data-tipo="Energia">
+                    <img src="../img/sistema geotermico.jpg" alt="">
+                    <h3>Energia Termodinâmica</h3>
+                </div>
+                <div class="product-item" data-tipo="Energia">
+                    <img src="../img/turbinas.jpg" alt="">
+                    <h3>Energia Eólica</h3>
+                </div>
+                <div class="product-item" data-tipo="Material">
+                    <img src="../img/texteisbio.jpg" alt="">
+                    <h3>Textil</h3>
+                </div>
+                <div class="product-item" data-tipo="Material">
+                    <img src="../img/bioplastico.jpg" alt="">
+                    <h3>Plástico Orgânico</h3>
+                </div>
+                <div class="product-item" data-tipo="Perfume">
+                    <img src="../img/perfume 3.jpg.png" alt="">
+                    <h3>Perfume Laranja</h3>
+                </div>
+                <div class="product-item" data-tipo="Perfume">
+                    <img src="../img/perfume 2.jpg.png" alt="">
+                    <h3>Perfume Rosé</h3>
+                </div>
+                <div class="product-item" data-tipo="Perfume">
+                    <img src="../img/perfume 1.jpg.png" alt="">
+                    <h3>Perfume Verde</h3>
+                </div>
+                <div class="product-item" data-tipo="Facial">
+                    <img src="../img/shampoo.jpg.png" alt="">
+                    <h3>Óleo Facial</h3>
+                </div>
+                <div class="product-item" data-tipo="Facial">
+                    <img src="../img/batom.jpg.png" alt="">
+                    <h3>Batom</h3>
+                </div>
+                <div class="product-item" data-tipo="Facial">
+                    <img src="../img/creme.jpg.png" alt="">
+                    <h3>Creme Facial</h3>
+                </div>
+                <div class="product-item" data-tipo="Corporeo">
+                    <img src="../img/bucha vegetal.jpg.png" alt="">
+                    <h3>Bucha de Banho</h3>
+                </div>
+                <div class="product-item" data-tipo="Corporeo">
+                    <img src="../img/sabonete.jpg.png" alt="">
+                    <h3>Sabonete Vegetal</h3>
+                </div>
+                <div class="product-item" data-tipo="Corporeo">
+                    <img src="../img/escova.jpg.png" alt="">
+                    <h3>Pente de Cabelo</h3>
+                </div>
+                <div class="product-item" data-tipo="Acento">
+                    <img src="../img/cadeira reciclavel.jpg" alt="">
+                    <h3>Cadeira Vermelha</h3>
+                </div>
+                <div class="product-item" data-tipo="Acento">
+                    <img src="../img/bancobio de papelao.jpg" alt="">
+                    <h3>Sofá Beje</h3>
+                </div>
+                <div class="product-item" data-tipo="Acento">
+                    <img src="../img/cadeira sintetica.jpg" alt="">
+                    <h3>Cadeira Marrom de Descanço</h3>
+                </div>
+                <div class="product-item" data-tipo="Acento">
+                    <img src="../img/cadeira-eucalipito.webp" alt="">
+                    <h3>Cadeira Cinza</h3>
+                </div>
+                <div class="product-item" data-tipo="Vaso">
+                    <img src="../img/vasos de plastico.jpg" alt="">
+                    <h3>Vaso Vertical</h3>
+                </div>
+                <div class="product-item" data-tipo="Vaso">
+                    <img src="../img/vasos de bambu.jpg" alt="">
+                    <h3>Vaso de Mesa</h3>
+                </div>
+                <div class="product-item" data-tipo="Prateleira">
+                    <img src="../img/exposiçao de madeira.jpg" alt="">
+                    <h3>Prateleira Horizontal</h3>
+                </div>
+                <div class="product-item" data-tipo="Prateleira">
+                    <img src="../img/pratileira de madeira reciclavel.jpg" alt="">
+                    <h3>Prateleira Vertical</h3>
+                </div>
+            </div>
+        </section>
+    
+        <script>
+            function filtrarProdutos() {
+                const tipoSelecionado = document.getElementById('tipo').value;
+                const produtos = document.querySelectorAll('.product-item');
+    
+                produtos.forEach(produto => {
+                    const tipoProduto = produto.getAttribute('data-tipo');
+    
+                    if (tipoSelecionado === 'all' || tipoProduto === tipoSelecionado) {
+                        produto.style.display = 'block';
+                    } else {
+                        produto.style.display = 'none';
+                    }
+                });
+            }
+        </script>
+  
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>   
+</body>
+</html>
